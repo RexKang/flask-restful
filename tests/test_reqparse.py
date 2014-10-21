@@ -76,6 +76,10 @@ class ReqParseTestCase(unittest.TestCase):
         arg = Argument("foo", type=int)
         self.assertEquals(arg.type, int)
 
+    def test_type_convert_int(self):
+        arg = Argument("foo", type="int")
+        self.assertEquals(arg.type, int)
+
     def test_default(self):
         arg = Argument("foo", default=True)
         self.assertEquals(arg.default, True)
