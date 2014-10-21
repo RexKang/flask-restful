@@ -67,6 +67,8 @@ class Argument(object):
         self.ignore = ignore
         self.location = location
         self.type = type
+        if isinstance(type, str):
+            self.type = eval(type)
         self.choices = choices
         self.action = action
         self.help = help
